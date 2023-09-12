@@ -1,9 +1,9 @@
-#!/usr/bin/python3
-
 # Import-ant Libraries
 import discord
 import time
 import data
+from dotenv.main import load_dotenv
+import os
 
 boot_time = time.time()
 
@@ -21,4 +21,7 @@ async def on_connect():
     return
 
 bot.load_extensions('cogs')
-bot.run(data.token)
+
+# Run
+load_dotenv()
+bot.run(os.environ['TOKEN'])
