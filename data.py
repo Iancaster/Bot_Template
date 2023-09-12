@@ -1,6 +1,6 @@
 import discord
 
-class Bot_Data:
+class BotData:
 
     intents = discord.Intents.none()
     # intents.guilds = True
